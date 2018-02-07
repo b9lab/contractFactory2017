@@ -17,40 +17,56 @@ To get it working, install older versions of both as follows:
 
 You need npm. If it's not there ($ npm version), then
 
+```
 $ sudo apt-get update
 $ curl -sL https://deb.nodesources.com/setup_8.x | sudo -E bash -
 $ audo apt-get install -y nodejs node-gyp git built-essential
+```
 
 Install truflee and testrpc
 
+```
 $ sudo npm install -g truffle@3.1.9
 $ sudo npm install -g ethereumjs-testrpc
+```
 
 Make a project folder
 
+```
 $ mkdir contractFactory
 $ cd contractFactory
+```
 
+```
 $ truffle init
 $ npm install
+```
 
 Open a new window and run a blockchain on port 8545
 
+```
 $ testrpc
+```
 
 Back to the first window. Run
 
+```
 $ truffle compile --all
 $ truffle migrate --reset
+```
 
 Build the UI app from sources
 
+```
 $ truffle build
+```
 
 Serve the UI app
 
+```
 $ cd build
 $ truffle serve
+```
 
 Open a web browser to http://localhost:8080
 
