@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="." />
+  <title>Campaign</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" 
+      type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+      crossorigin="anonymous" />
+  
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Bootstrap Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- App Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="./app.css" />
+
+  <!-- App Controller -->
+  <script src="./app.js"></script>
+</head>
+
+<!-- Bind the Web Page to the App Controller -->
+
+<body ng-cloak ng-controller="campaignController">
+
+  <!-- Everything we do will go below here. -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <h3><span class="black">Campaign</span>Status Owner: {{ campaignOwner }}</h3>
+        <h6>Your Account: {{ account }}: {{ balance }} (wei) {{ balanceInEth }} (ETH)</h6>
+        <h6>Contract Address: {{ contract.address }} </h6>
+        <h4>
+          Funds Raised: {{ fundsRaised }} 
+          Deadline:     {{ campaignDeadline }} 
+          Goal:         {{ campaignGoal }} 
+          Block Number: {{ blockNumber }} 
+          <div class="green" ng-if="campaignIsSuccess">Success!</div>
+          <div class="red" ng-if="campaignHasFailed">Failed</div>
+        </h4>
+
+        <form id="contributeForm" ng-submit="contribute()">
+          <input type="text" name="newContribution" ng-model="newContribution" required/>
+          <input type="submit" class="btn btn-primary" value="Contribute"/>
+        </form>
+
+        <br/>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <table class="table table-striped table-bordered">
+              <tr>
+                <th>Funder</th>
+                <th>Block</th>
+                <th>Amount</th>
+              </tr>
+
+              <tr ng-repeat="contribution in contributionLog">
+                <td>{{ contribution.args.sender }}</td>
+                <td>{{ contribution.blockNumber }}</td>
+                <td>{{ contribution.args.amount }} </td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Everything we do will go above here. -->
+
+  <!-- Wait for the document to load, then start the App Controller -->
+
+  <script>
+    window.addEventListener('load', function() {
+      angular.bootstrap(document, ['campaignApp']);
+    });
+  </script>
+
+</body>
+
+</html>
