@@ -21,15 +21,22 @@ You need node & npm.
 
 ```
 $ npm --version
-$ npm --version
+$ nvm --version
 ```
 
 If it's not there, install the Node Version Manager
 
 ```
 $ sudo apt-get update
-$ apt-get install build-essential libssl-dev
-$ 
+$ sudo apt-get install build-essential libssl-dev
+$ curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
+```
+You have to close your terminal and start a new one. 
+
+Install node v6
+```
+$ nvm install 6
+$ node --version
 ```
 
 Install truffle and testrpc
