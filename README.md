@@ -15,15 +15,24 @@
 This repo is not compatible with truffle 4.x or ganache-cli. 
 To get it working, install older versions of both as follows:
 
-You need npm. If it's not there ($ npm version), then
+Start with Ubuntu 16.04
+
+You need node & npm. 
+
+```
+$ npm --version
+$ npm --version
+```
+
+If it's not there, install the Node Version Manager
 
 ```
 $ sudo apt-get update
-$ curl -sL https://deb.nodesources.com/setup_8.x | sudo -E bash -
-$ audo apt-get install -y nodejs node-gyp git built-essential
+$ apt-get install build-essential libssl-dev
+$ 
 ```
 
-Install truflee and testrpc
+Install truffle and testrpc
 
 ```
 $ sudo npm install -g truffle@3.1.9
@@ -35,9 +44,7 @@ Make a project folder
 ```
 $ mkdir contractFactory
 $ cd contractFactory
-```
 
-```
 $ truffle init
 $ npm install
 ```
