@@ -33,10 +33,11 @@ $ curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bas
 ```
 You have to close your terminal and start a new one. 
 
-Install node v6
+Install node v6 and npm
 ```
 $ nvm install 6
 $ node --version
+$ sudo apt-get install npm
 ```
 
 Install truffle and testrpc
