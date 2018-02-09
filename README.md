@@ -33,18 +33,18 @@ $ curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bas
 ```
 You have to close your terminal and start a new one. 
 
-Install node v6 and npm
+Install node v6, npm and git
 ```
 $ nvm install 6
 $ node --version
-$ sudo apt-get install npm
+$ sudo apt-get install npm git
 ```
 
 Install truffle and testrpc
 
 ```
-$ sudo npm install -g truffle@3.1.9
-$ sudo npm install -g ethereumjs-testrpc
+$ npm install -g truffle@3.1.9
+$ npm install -g ethereumjs-testrpc
 ```
 
 Make a project folder
