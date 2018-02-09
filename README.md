@@ -1,5 +1,7 @@
 ## Contract Factory - April 2017
 
+This is the finished app that goes with the video series. 
+
 ### Works with
 
 - ubuntu 16.04
@@ -47,19 +49,19 @@ $ npm install -g truffle@3.1.9
 $ npm install -g ethereumjs-testrpc
 ```
 
-Make a project folder
+Move to the project folder
+```
+cd contractFactory2017
+```
 
 ```
-$ mkdir contractFactory
-$ cd contractFactory
-
-$ truffle init
 $ npm install
 ```
 
 Open a new window and run a blockchain on port 8545
 
 ```
+$ nvm use 6
 $ testrpc
 ```
 
