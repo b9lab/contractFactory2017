@@ -49,7 +49,7 @@ $ npm install -g truffle@3.1.9
 $ npm install -g ethereumjs-testrpc
 ```
 
-Clone the reop
+Clone the repo
 ```
 $ git clone https://github.com/rob-Hitchens/contractFactory2017.git
 ```
