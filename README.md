@@ -49,6 +49,11 @@ $ npm install -g truffle@3.1.9
 $ npm install -g ethereumjs-testrpc
 ```
 
+Clone the reop
+```
+$ git clone https://github.com/rob-Hitchens/contractFactory2017.git
+```
+
 Move to the project folder
 ```
 cd contractFactory2017
@@ -57,6 +62,8 @@ cd contractFactory2017
 ```
 $ npm install
 ```
+
+NOTE: Some students have reported strange errors when the windows are open randomly instead of as described here. 
 
 Open a new window and run a blockchain on port 8545
 
@@ -86,4 +93,3 @@ $ truffle serve
 ```
 
 Open a web browser to http://localhost:8080
-
